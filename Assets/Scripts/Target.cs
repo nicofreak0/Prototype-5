@@ -1,5 +1,5 @@
 using UnityEngine;
-using System.Collections; // Make sure this is included for IEnumerator
+using System.Collections; 
 
 public class Target : MonoBehaviour
 {
@@ -9,8 +9,8 @@ public class Target : MonoBehaviour
     private float maxSpeed = 16;
     private float maxTorque = 10;
     private float xRange = 4;
-    private float ySpawnPos = -6;
-    private float destroyDelay = 0.1f; // Delay before destroying the object
+    private float ySpawnPos = -4;
+    private float destroyDelay = 0.1f;
 
     public ParticleSystem explosionParticle;
     public int pointValue;

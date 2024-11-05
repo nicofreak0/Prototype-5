@@ -1,7 +1,7 @@
-using System.Collections; // Required for IEnumerator
-using System.Collections.Generic; // Required for List
-using TMPro; // Required for TextMeshProUGUI
-using UnityEngine; // Required for MonoBehaviour
+using System.Collections; 
+using System.Collections.Generic; 
+using TMPro; 
+using UnityEngine; 
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI gameOverText;
     public Button restartButton;
-    public GameObject titleScreen; // Added title screen GameObject
+    public GameObject titleScreen;
     public bool isGameActive;
     private int score;
     private float spawnRate = 1.0f;
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // You can add any update logic here
+        
     }
 
     IEnumerator SpawnTarget()
@@ -56,13 +56,14 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void StartGame(int difficulty) // Accept difficulty parameter
+    //accept difficulty parameter
+    public void StartGame(int difficulty) 
     {
         isGameActive = true;
-
-        titleScreen.SetActive(false); // Deactivate the title screen
-
-        spawnRate /= difficulty; // Adjust spawn rate based on difficulty
+        //deactivate the title screen
+        titleScreen.SetActive(false); 
+        //adjust spawn rate based on difficulty
+        spawnRate /= difficulty; 
 
         StartCoroutine(SpawnTarget());
         score = 0;
